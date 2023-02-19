@@ -9,10 +9,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Shad-Coder - Portfolio</title>
 </head>
 <body>
+    
     <canvas id="matrix"></canvas>
+    <div class="options__wrapper">
+     <div class="options__button" id="options">
+        <div></div>
+     </div>
+  
+     <div class="options">
+       
+        <label class="switch">
+            <input type="checkbox" id="setting__1">
+            <span class="slider round"></span>
+            
+          </label>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="fff">
+            <span class="slider round"></span>
+          </label>
+          <div class="options__title">
+          <p>disable bg effects</p>
+          <p>lite mode</p>
+          <p>DEATH</p>
+          
+        </div>
+         <div class="select__color">
+            <input value="#3399FF80" data-jscolor="{}" style="z-index: 32424324;" class="change__color" id="color">
+         </div>
+     </div>
+    </div>
     <div class="global__header">
         <ul class="modules">
             <li><a href="#" style="text-decoration: none;">Module1</a></li>
@@ -32,8 +64,11 @@
        </div>
     
     </div>
-    <div class="wrapper">
-     
+    <div class="wrapper" id="wrapper">
+     <canvas id="lolanim">
+
+     </canvas>
+  
      <div class="content">
         <header>
             <div class="content__visible">
@@ -41,7 +76,7 @@
             </div>
             <div class="content__hidden">
                 <h2>I Frontend developer</h2>
-                good afternoon visitors of this site, I would like to tell you about my experience in front end development, the languages and libraries I studied: html(5), css(3), Vanilla JS, React, Bootstrap, and some other less well-known, interesting fact- at the time of the creation of this site I I was only 15 years old.
+                good afternoon visitors of this site, I would like to tell you about my experience in frontend development, the languages and libraries I studied: html(5), css(3), Vanilla JS, React, Bootstrap, and some other less well-known, interesting fact- at the time of the creation of this site I I was only 15 years old.
                 <h2>I designer</h2>
                 Despite the fact that I have no professional training in design, thanks to the methods I have mastered and the skills I have acquired, I am able, if necessary, to create a unique design for websites or applications, a striking example is this page on the design of which only I worked.
             </div>
@@ -78,12 +113,25 @@
             </div>
             <span class="deliner"></span>
             </div>
-          
-            
+            <div class="lines">
+
+            </div>
+            <div class="lines1">
+
+            </div>
+            <div class="little__Info">
+     
+                <div class="line__deliner"> <h3>Little info</h3></div>
+                <div class="this__text">
+                <p>This skill tree be always updating<br>if tou yua dusdi vh</p>
+            </div>
+            </div>
         </div>
+        
      </div>
     </div>
     <script src="script.js"></script>
+    <script src="jscolor.js"></script>
 </body>
 <!-- use lates
 

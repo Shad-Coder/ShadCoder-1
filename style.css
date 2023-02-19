@@ -8,7 +8,86 @@ html, body {
     background-color: #13131b;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
+body h3 {
+    color: rgba(137, 151, 158, 0.86);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 0;
+}
 
+.disable {
+    display: none;
+}
+.switch {
+    position: relative;
+    display:block;
+    margin-top: 2.5vmin;
+    width: 6vmin;
+    height: 3vmin;
+  }
+  .options__title {
+    display: inline;
+    position: absolute;
+    top: 5.2vmin;
+    line-height: 1.7;
+    left: 10vmin;
+    color: #046aef;
+    font-size: 2.1vmin;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6679a1;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 2.5vmin;
+    width: 2.5vmin;
+    border: 2px solid rgb(171, 161, 161);
+    box-sizing: border-box;
+    bottom: 0.25vmin;
+    background-color: rgba(60, 53, 54, 0.966);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    border: 2px solid rgb(173, 148, 148);
+    box-sizing: border-box;
+    transform: translateX(3.5vmin);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
 .wrapper {
     position: relative;
     width: 70%;
@@ -25,10 +104,13 @@ html, body {
     background-position: center center;
     overflow: hidden;
     background: #181820;
-  
 
 }
+.change {
+    position: absolute;
+    color: #046aef;
 
+}
 .content { 
     height: 100%;
     width: 100%;
@@ -223,10 +305,26 @@ header {
     border-bottom: 2px solid rgb(156, 50, 50);
     border-radius: 2px solid;
     transition: 0.5s;
+    z-index: 22;
+    animation-name: aa;
+   /* animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; */
 }
+/* прикольная анимация с ргб / fun anim with rgb
+@keyframes aa {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+*/
 header:hover {
     transition: 0.6s;
-    height: 21vh;
+    height: 22.5vh;
+    
 }
 header:hover .content__hidden {
     visibility: visible;
@@ -239,7 +337,7 @@ header:hover .content__hidden {
     line-height: 2vmin;
     font-size: 1.5vmin;
     height: auto;
-    
+    padding-top: 2vmin;
     justify-content: center;
     align-items: center;
     color: rgba(145, 145, 145, 0.896);
@@ -266,7 +364,7 @@ header:hover .content__visible {
     line-height: 2vmin;
     font-size: 1.5vmin;
     height: auto;
-    margin-top: 5vmin;
+    margin-top: 3vmin;
     justify-content: center;
     align-items: center;
     color: rgba(145, 145, 145, 0.896);
@@ -306,10 +404,10 @@ header:hover .content__visible {
 }
 
 .block__1 {
-    width: 49%;
+    width: 29%;
     height: 100%;
     position: absolute;
-    left: -48%;
+    left: -20%;
     background: #0d0d1100;
     border-radius: 4.5vmin;
     border: 2px solid #32326a;
@@ -346,7 +444,7 @@ header:hover .content__visible {
     color: #323b4600;
 }
 .block__1:hover {
-    width: 48%;
+    width: 29%;
     height: 100%;
     background: #1e1e2a;
     border-radius: 4.5vmin;
@@ -392,19 +490,17 @@ header:hover .content__visible {
     transition: 1s;
 }
 .content__other {
-    position: absolute;
+    position: relative;
     transition: 0.5s;
-    width: 40%;
-    left: 30%;
-    right: 30%;
+    width: 50%;
+    margin: 0 auto;
     display:flow-root;
     height: auto;
     border-bottom: 2px solid rgb(216, 64, 64);
-border-top: 2px solid rgb(196, 61, 61);
-border-left: 1px solid rgb(216, 64, 64);
-border-right: 1px solid rgb(216, 64, 64);
-box-shadow: 0px 2px 11px 4px rgba(223, 89, 82, 0.2), 0px 2px 11px 4px rgba(223, 89, 82, 0.2) inset;
-    margin: 0;
+    border-top: 2px solid rgb(196, 61, 61);
+    border-left: 1px solid rgb(216, 64, 64);
+    border-right: 1px solid rgb(216, 64, 64);
+    box-shadow: 0px 2px 11px 4px rgba(223, 89, 82, 0.2), 0px 2px 11px 4px rgba(223, 89, 82, 0.2) inset;
     padding: 0;
     border-radius: 2vmin;
     z-index: 22;
@@ -421,10 +517,10 @@ box-shadow: 0px 2px 11px 4px rgba(223, 89, 82, 0.2), 0px 2px 11px 4px rgba(223, 
     padding: 0 auto;
     top: 0;
     z-index: 1;
-    transition: 0.5s;
+    transition: 0.78s;
 }
 .content__other:hover {
-    background: rgba(113, 43, 43, 0.47);
+    background: rgba(113, 43, 43, 0.115);
         transition: 0.5s;
 }
 .base__1 {
@@ -448,7 +544,7 @@ transition: 1s;
 filter:contrast(1)
 }
 .base__1:hover {
-    filter:contrast(1.5);
+    filter:contrast(1.3);
    
     
 }
@@ -457,7 +553,8 @@ filter:contrast(1)
     font-size: 2vmin;
     text-align: center;
     padding: 0;
-    margin: 0;
+    margin-top: 0.9vmin;
+
     padding-top: 0.9vmin;
 }
 .base__1 > p {
@@ -485,9 +582,51 @@ filter:contrast(1)
     border-top-left-radius: 0.5vmin;
     border-top: 2px solid rgb(194, 81, 81);
 }
+.select__color {
+  position: absolute;
+  top: 7vmin;
+  right: 2.5vmin;
+  z-index: 99999999;
+ 
+ 
+}
+.change__color {
+width: 9vmin;
+border-radius: 1.2vmin;
+background-color: rgb(32, 41, 54);
+color: #046aef;
+border: 1px solid #046aef;
+height: 5vmin;
+font-size: 2.5vmin;
+}
 .pointer {
     text-align: center;
 }
+.lines {
+    width: 20%;
+    height: 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    border-radius: 4vmin;
+    border: 2px solid #046aefba;
+    top: 6%;
+    left: -19%;
+}
+.lines1 {
+    width: 20%;
+    height: 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    border-radius: 4vmin;
+    border: 2px solid #046aefba;
+    top: 6%;
+    right: -19%;
+}
+
 #matrix {
     width: 100%;
     height: 2000px;
@@ -495,7 +634,126 @@ filter:contrast(1)
    margin: 0;
    
 }
-@media (max-width: 767px) {
+#lolanim {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.little__Info {
+   
+    width: 30%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: auto;
+    text-align: center;
+    color: #8794a2;
+    font-size: 2vmin;
+    padding: 0px;
+    padding-top: 2vmin;
+  
+}
+.line__deliner {
+position: relative;
+   border-bottom: 1px solid #8a97a8;
+ font-size: 1.7vmin;
+}
+.line__deliner::after {
+    width: 25%;
+    height: 1PX;
+    content: '';
+    position: absolute;
+    background-color: #8a97a8f3;
+    top: 0;
+    right: 10%;
+}
+.line__deliner::before {
+    width: 25%;
+    height: 1PX;
+    content: '';
+    position: absolute;
+    background-color: #8a97a8f0;
+    top: 0;
+    left: 10%;
+}
+.this__text {
+    font-size: 1.4vmin;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #8a97a8ec;
+    width: 90%;
+    margin-left: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.options__button {
+    width: 14vmin;
+    height: 3vmin;
+    position: relative;
+    background-color: #046aef;
+    bottom: 0;
+    border-top-left-radius: 1.5vmin;
+    border-top-right-radius: 1.5vmin;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 978967;
+
+}
+.options__button > div {
+    width: 50%;
+    height: 3px;
+    background-color: #000000;
+    z-index: 987069;
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1vmin;
+    left: 25%;
+    right: 25%;
+    bottom: 40%;
+    display: inline;
+}
+.options {
+    width: 45vmin;
+    height: 25vmin;
+    
+    background-color: #202936;
+    border-radius: 1.5vmin;
+    border: 2px solid #046aef;
+    padding: 2vmin 2vmin;
+    bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+}
+.option {
+    display: block;
+    margin-top: 2.3vmin;
+    border-radius: 50%;
+}
+.options__wrapper {
+  position: fixed;
+    transition: 0.6s;
+  width: 50vmin;
+  height: 25vmin;
+  z-index: 9999999;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -22.4vmin;
+}
+.options__wrapper.actived {
+    bottom: 0;
+
+    transition: 0.6s;
+}
+@media (max-width: 800px) {
 .wrapper {
     position: relative;
     width: 94%;
