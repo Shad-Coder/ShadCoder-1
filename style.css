@@ -11,7 +11,7 @@ html, body {
 body h3 {
     color: rgba(137, 151, 158, 0.86);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 0;
+ 
 }
 
 .disable {
@@ -94,17 +94,24 @@ body h3 {
     left: 15%;
     right: 15%;
     min-height: 100%;
-    height: 2000px;
-    top: 20%;
-    border-top-right-radius: 5vmin;
-    border-top-left-radius: 5vmin;
+    height: auto;
+    top: 10%;
+    bottom: 10%;
+    border-radius: 5vmin;
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden;
     background: #181820;
-
+    box-sizing: border-box;
+    border: 2px solid #096cee;
+  
+}
+.bottom__wrapper {
+    width: 100%;
+    height: 30vmin;
+    background-color: #13131b;
 }
 .change {
     position: absolute;
@@ -112,10 +119,11 @@ body h3 {
 
 }
 .content { 
-    height: 100%;
+    height: auto;
     width: 100%;
-    position: absolute;
-
+    
+    
+  
 }
 .global__header {
     width: 90%;
@@ -591,14 +599,15 @@ filter:contrast(1)
  
 }
 .change__color {
-width: 9vmin;
+width: 9.5vmin;
 border-radius: 1.2vmin;
 background-color: rgb(32, 41, 54);
 color: #046aef;
 border: 1px solid #046aef;
-height: 5vmin;
+height: 3vmin;
 font-size: 2.5vmin;
 }
+
 .pointer {
     text-align: center;
 }
@@ -612,7 +621,9 @@ font-size: 2.5vmin;
     border-radius: 4vmin;
     border: 2px solid #046aefba;
     top: 6%;
+    z-index: 500;
     left: -19%;
+    background-color: #16161c;
 }
 .lines1 {
     width: 20%;
@@ -625,12 +636,14 @@ font-size: 2.5vmin;
     border: 2px solid #046aefba;
     top: 6%;
     right: -19%;
+    z-index: 500;
+    background-color: #16161c;
 }
 
 #matrix {
     width: 100%;
-    height: 2000px;
-   position: absolute;
+    height: 100%;
+   position: fixed;
    margin: 0;
    
 }
@@ -641,9 +654,9 @@ font-size: 2.5vmin;
     z-index: -1;
 }
 .little__Info {
-   
+    
     width: 30%;
-    height: 20%;
+    height: 20vmin;
     margin: 0 auto;
     margin-top: auto;
     text-align: center;
@@ -753,6 +766,36 @@ position: relative;
 
     transition: 0.6s;
 }
+.footer {
+
+    height: 15vmin;
+    width: 100%;
+    z-index: 333;
+    background-color: #16161c;
+    margin-bottom: auto;
+    border-top: 1px solid #0d74fb;
+    column-count: 2;
+  
+}
+.footer__desc {
+    
+    height: 95%;
+  
+}
+.footer__links {
+   
+    height: 95%;
+ 
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 800px) {
 .wrapper {
     position: relative;
@@ -770,7 +813,7 @@ position: relative;
     background-position: center center;
     overflow: hidden;
     background: #181820;
-
+    transition: 0.7s;
 }
 }
 @media (max-width: 1590px) {}

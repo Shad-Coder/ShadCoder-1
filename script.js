@@ -50,7 +50,7 @@ function matrix () {
 
 
   ctx.fillStyle = thecolor;
-  ctx.font = '17pt monospace';
+  ctx.font = '22pt monospace';
  
 
 
@@ -64,14 +64,14 @@ function matrix () {
     ctx.fillText(text, x, y);
 
    
-    if (y > 100 + Math.random() * 40000) ypos[ind] = 0;
+    if (y > 100 + Math.random() * 1000000) ypos[ind] = 0;
   
     else ypos[ind] = y + 25;
   });
 }
 
 
-setInterval(matrix, 35);
+setInterval(matrix, 15);
 
 
 
@@ -93,6 +93,16 @@ fff.addEventListener('click', function() {
 })
 // line animation 
 //change color
-
+let bgfon = document.querySelector('#bgfon');
+let fon = document.querySelector('.wrapper');
+bgfon.addEventListener('click', function () {
+  if(bgfon.checked) {
+    fon.style = 'background-color: #00000000;'
+  }
+  else {
+    fon.style = 'background-color: #181820;'
+  }
+ 
+})
 
 
